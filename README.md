@@ -1,8 +1,10 @@
 # After Effects Expressions
 
-In the [Files](https://wood.boszko.com:2443/bobtiki/ae-expressions/tree/master) area are the expressions I use in After Effects. Some I've developed, and some are based on expressions found on the resource sites below. I've tried to credit the original author, where it hasn't been losts to the mists of time.
+The JavaScript files here are [expressions](https://helpx.adobe.com/after-effects/using/expression-basics.html) for After Effects. Some I've developed, some are from colleagues and from the resource sites below. I've tried to credit the original author in the comments for each script.
 
-## Expressions Resources
+Aside from the code here, there are a number of other resources to help you learn and implement expressions:
+
+## Expressions
 
 - [MotionScript.com](http://www.motionscript.com/) — legendary expressions and scripting resource by Dan Ebberts
 - *[After Effects Expressions](http://www.amazon.com/gp/product/024080936X/ref=as_li_tl?ie=UTF8&camp=1789&creative=390957&creativeASIN=024080936X&linkCode=as2&tag=opticalpodcast-20&linkId=XTPVQTKOURWFEKRN)* book by Marcus Geduld
@@ -12,7 +14,7 @@ In the [Files](https://wood.boszko.com:2443/bobtiki/ae-expressions/tree/master) 
 - [AE Enhancers](http://www.aenhancers.com/)
 - i2c [After Effects Expressions Basics](http://ideastocreations.blogspot.com/p/after-effects-expressions-basics.html) PDF by David Alex
 
-## Javascript Resources
+## Javascript
 
 Since Expressions are written in JavaScript, it's good to have a handle on the language.
 
