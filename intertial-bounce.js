@@ -2,12 +2,12 @@
 
 // I feel like this is probably based on something from MotionScript.com, but
 // this is the closest one I see online:
-// http://www.motion-graphics-exchange.com/after-effects/Wiggle-rubber-bounce-throw-inertia-expressions/4ad0f32a944ad
+// http://www.graymachine.com/my-top-5-after-effects-expressions/
 
-// These are the settings to tweak to customize the animation
-// Amplitude controls how "stretchy" the rubber band is
-// Frequency determines how fast it vibrates
-// Decay is how fast it settles down. [not sure which way it goes]
+// Tweak these settings to customize animation:
+// amp: amplitude, how much bounce is present
+// freq: frequency, how frequently the bounce occurs
+// decay: a friction/mass setting, higher value means a shorter decay
 
 amp = 0.04;
 freq = 3.0;
