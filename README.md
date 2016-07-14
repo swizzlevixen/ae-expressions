@@ -17,6 +17,11 @@ Aside from the code here, there are a number of other resources to help you lear
 - [AExpr Breakdown](https://aexpr.wordpress.com/)
 - [Questions tagged `after-effects-expressions`](http://video.stackexchange.com/questions/tagged/after-effects-expressions) on the [Video Production](http://video.stackexchange.com/) [StackExchange](http://stackexchange.com/)
 
+### Tips
+
+- In After Effects CC 2015 (13.5) or later (released 2015-06-26), [Adobe has improved error handling in expressions](http://blogs.adobe.com/aftereffects/2015/06/changes-to-expressions-in-after-effects-cc-2015-13-5.html). Go to **After Effects CC > Preferences > General…** and check the box for **Enable JavaScript Debugger**.
+- [Expressionist](http://aescripts.com/expressionist/) — Remco Janssen has written a new expression editor, that gives you a window inside AE with basic IDE features such as syntax highlighting, line numbers and multiple cursors. $40, released 2016-03-03.
+
 ## Javascript
 
 Since Expressions are written in JavaScript, it's good to have a handle on the language.
@@ -33,8 +38,3 @@ Similar to Expressions, but for scripting the After Effects app itself, vs. a va
 - Adobe [After Effects Scripting Forum](http://forums.adobe.com/community/aftereffects_general_discussion/ae_scripting)
 - [aescripts + aeplugins](http://aescripts.com) marketplace for people to sell (or give away) their scripts.
 - [Redefinery](http://www.redefinery.com/ae/) scripts by Jeff Almasol
-
-## Tips
-
-- In After Effects CC 2015 (13.5) or later (released 2015-06-26), [Adobe has improved error handling in expressions](http://blogs.adobe.com/aftereffects/2015/06/changes-to-expressions-in-after-effects-cc-2015-13-5.html). Go to **After Effects CC > Preferences > General…** and check the box for **Enable JavaScript Debugger**.
-- [Expressionist](http://aescripts.com/expressionist/) — Remco Janssen has written a new expression editor, that gives you a window inside AE with basic IDE features such as syntax highlighting, line numbers and multiple cursors. $40, released 2016-03-03.
