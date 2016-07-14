@@ -13,7 +13,9 @@ Aside from the code here, there are a number of other resources to help you lear
 - Adobe [After Effects Expressions Forum](http://forums.adobe.com/community/aftereffects_general_discussion/aftereffects_expressions)
 - [AE Enhancers](http://www.aenhancers.com/)
 - i2c [After Effects Expressions Basics](http://ideastocreations.blogspot.com/p/after-effects-expressions-basics.html) PDF by David Alex
-- [Introduction to Expressions](http://www.jjgifford.com/expressions/basics/index.html) by JJ Gifford hasn't been updated since 2001, but much of it is still useful, especially his [tables of properties that you can control with expressions](http://www.jjgifford.com/expressions/tables/index.html).
+- [Introduction to Expressions](http://www.jjgifford.com/expressions/basics/index.html) by JJ Gifford — hasn't been updated since 2001, but much of it is still useful, especially his [tables of properties that you can control with expressions](http://www.jjgifford.com/expressions/tables/index.html).
+- [AExpr Breakdown](https://aexpr.wordpress.com/)
+- [Questions tagged `after-effects-expressions`](http://video.stackexchange.com/questions/tagged/after-effects-expressions) on the [Video Production](http://video.stackexchange.com/) [StackExchange](http://stackexchange.com/)
 
 ## Javascript
 
