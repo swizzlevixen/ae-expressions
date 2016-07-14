@@ -21,6 +21,7 @@ Aside from the code here, there are a number of other resources to help you lear
 
 - In After Effects CC 2015 (13.5) or later (released 2015-06-26), [Adobe has improved error handling in expressions](http://blogs.adobe.com/aftereffects/2015/06/changes-to-expressions-in-after-effects-cc-2015-13-5.html). Go to **After Effects CC > Preferences > General…** and check the box for **Enable JavaScript Debugger**.
 - [Expressionist](http://aescripts.com/expressionist/) — Remco Janssen has written a new expression editor, that gives you a window inside AE with basic IDE features such as syntax highlighting, line numbers and multiple cursors. $40, released 2016-03-03.
+- Paul Tuersley’s [ExpressEdit 2](http://aescripts.com/pt_expressedit/) is also a good option for managing expressions project-wide.
 
 ## Javascript
 
