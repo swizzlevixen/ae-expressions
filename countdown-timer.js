@@ -9,7 +9,9 @@
 // 
 // Modified for hours and days; coding style updates by Mark Boszko
 // v1.5, 2017-06-12
-// local variables use underscore_names to contrast with expressionLayerAttributes
+// - local variables use underscore_names to contrast with
+//   After Effects expression camelCaseAttributes
+
 // 
 // USAGE:
 // Attach as an expression for the source text for a Text Layer. 
@@ -17,30 +19,40 @@
 
 //////////
 // 
-// ATTRIBUTES
-// 
 // Edit these attributes to adjust the timer for your use
 // 
 
-// How many days, hours, minutes, and seconds you want to count down.
+// How many days, hours, minutes, and seconds you want to count down?
+// TODO: Enable calculation of days and hours.
+//       For the moment, the display is faked with unchanging input values
 days_to_count = 253;
 hours_to_count = 17;
 minutes_to_count = 01;
 seconds_to_count = 57;
 
-// TODO: Enable calculation of days and hours.
-//       For the moment, the display is faked with the input values
-
 // Number of seconds to hold the countdown timer at full 
 // before it starts counting down 
 offset_seconds = 0;
 
-include_zero_segments = true;  // true to include minutes, hours, or days, even if they have counted down to zero
-include_decimal_seconds = false;  // true to include decimal parts of seconds, false to exclude 
-decimal_places = 2;  // Number of decimal places to include (int)
-// FIXME: Why on earth do we need both include_decimal_seconds and decimal_places? Just deduce false if decimal_places == 0
-allow_negative_times = false;	 // true to allow the countdown to run past 0, false to hold the timer at 0 seconds. 
-include_leading_zeroes = true;	 // true to include leading zeroes in front of minutes to keep text in same location 
+// Include minutes in the display?
+// true or false
+include_minutes = true;
+
+// true to include leading zeroes in front of single-digit values,
+// to keep text in same location
+// TODO: this should also keep the number of digits originally entered for
+//       days_to_count the same as entered
+//       (e.g., a 3-digit day count: 253 keeps up to two leading zeroes: 001)
+include_leading_zeroes = true;
+
+// Integer of decimal places to include, counting fractional seconds
+// If 0, only whole seconds will be displayed
+decimal_places = 2;
+
+// allow_negative_times
+// true to allow the countdown to run past 0,
+// false to hold the timer at 0 seconds.
+allow_negative_times = false;
 
 
 //////////
@@ -82,36 +94,35 @@ decimal_seconds_remaining = Math.floor(decimal_seconds_remaining * decimal_multi
 // prepare the seconds for display - puts the decimal point back where it belongs
 display_seconds_remaining = decimal_seconds_remaining / decimal_multiple;	  
 
-// FIXME: This does not work
-if (0 == decimal_seconds_remaining % decimal_multiple && include_decimal_seconds) 
-{ 
-    // If we are at an even second and the user wants the decimal places 
-    // displayed, tag the decimal point on to the string. 
+// If we are at an even second and the user wants the decimal places 
+// displayed, tag the decimal point on to the string.
+if (0 == decimal_seconds_remaining % decimal_multiple && decimal_places > 0) 
+{  
     display_seconds_remaining = display_seconds_remaining + ".";
 } 
 
-if(include_decimal_seconds) 
+// Calculate trailing zeroes for decimal fractions
+if(decimal_places > 0) 
 { 
     for (a = 1; a <= decimal_places; a++) 
     { 
         if(!(decimal_seconds_remaining % Math.pow(10, a))) 
         { 
         // Add appropriate trailing zeroes if we are showing decimals.
-        // FIXME: This does not work
         display_seconds_remaining = display_seconds_remaining + "0"; 
         } 
     } 
 } 
 
 
-if(decimal_seconds_remaining < decimal_multiple * 10 && include_zero_segments)
+if(decimal_seconds_remaining < decimal_multiple * 10 && include_minutes)
 { 
     // if we are under 10 seconds and displaying minutes, 
     // add a leading 0 to the seconds 
     display_seconds_remaining = '0' + display_seconds_remaining; 
 } 
 
-if(include_zero_segments && minutes_to_count >= 0 && minutes_remaining < 10 && include_leading_zeroes) 
+if(include_minutes && minutes_to_count >= 0 && minutes_remaining < 10 && include_leading_zeroes) 
 { 
     display_minutes_remaining = '0' + minutes_remaining; 
 } else { 
