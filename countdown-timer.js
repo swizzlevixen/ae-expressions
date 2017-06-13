@@ -27,7 +27,7 @@
 //       For the moment, the display is faked with unchanging input values
 days_to_count = 253;
 hours_to_count = 17;
-minutes_to_count = 01;
+minutes_to_count = 04;
 seconds_to_count = 57;
 
 // Number of seconds to hold the countdown timer at full 
