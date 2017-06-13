@@ -38,6 +38,7 @@ offset_seconds = 0;
 include_zero_segments = true;  // true to include minutes, hours, or days, even if they have counted down to zero
 include_decimal_seconds = false;  // true to include decimal parts of seconds, false to exclude 
 decimal_places = 2;  // Number of decimal places to include (int)
+// FIXME: Why on earth do we need both include_decimal_seconds and decimal_places? Just deduce false if decimal_places == 0
 allow_negative_times = false;	 // true to allow the countdown to run past 0, false to hold the timer at 0 seconds. 
 include_leading_zeroes = true;	 // true to include leading zeroes in front of minutes to keep text in same location 
 
