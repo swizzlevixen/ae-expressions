@@ -17,6 +17,7 @@
 // Attach as an expression for the source text for a Text Layer. 
 // 
 
+
 //////////
 // 
 // Edit these attributes to adjust the timer for your use
@@ -129,5 +130,10 @@ if(include_minutes && minutes_to_count >= 0 && minutes_remaining < 10 && include
     display_minutes_remaining = minutes_remaining; 
 } 
 
+
+//////////
+// 
 // Build the final display string
+// 
+
 days_to_count + "d " + hours_to_count + ":" + display_minutes_remaining + ':' + display_seconds_remaining
