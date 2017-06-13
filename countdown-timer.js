@@ -3,7 +3,7 @@
 //
 // Edited by Nathaniel Schweinberg - nathaniel@ftcmedia.com
 // 2010-04-28
-// posted to Creative Cow: https://forums.creativecow.net/readpost/227/15504
+// https://forums.creativecow.net/readpost/227/15504
 // 
 // Modified for hours and days; coding style updates by Mark Boszko
 // v1.5, 2017-06-12
@@ -20,16 +20,22 @@
 // Edit these attributes to adjust the timer for your use
 // 
 
-days_to_count = 253;    //How many days you want to be counted down. 
-hours_to_count = 17;    //How many hours you want to be counted down. 
-minutes_to_count = 04;	 //How many minutes you want to be counted down. 
-seconds_to_count = 57;	 //How many additional seconds you want to be counted down. 
+// How many days, hours, minutes, and seconds you want to count down.
+days_to_count = 253;
+hours_to_count = 17;
+minutes_to_count = 01;
+seconds_to_count = 57;
 
-offset_seconds = 0; //Number of seconds to hold the countdown timer at full before it starts counting down 
+// TODO: Enable calculation of days and hours.
+//       For the moment, the display is faked with the input values
 
-include_zero_segments = true;  // true to include minutes, hours, or days, even if they are at zero
+// Number of seconds to hold the countdown timer at full 
+// before it starts counting down 
+offset_seconds = 0;
+
+include_zero_segments = true;  // true to include minutes, hours, or days, even if they have counted down to zero
 include_decimal_seconds = false;  // true to include decimal parts of seconds, false to exclude 
-decimal_places = 0;  // Number of decimal places to include (int)
+decimal_places = 2;  // Number of decimal places to include (int)
 allow_negative_times = false;	 // true to allow the countdown to run past 0, false to hold the timer at 0 seconds. 
 include_leading_zeroes = true;	 // true to include leading zeroes in front of minutes to keep text in same location 
 
@@ -73,7 +79,8 @@ decimal_seconds_remaining = Math.floor(decimal_seconds_remaining * decimal_multi
 // prepare the seconds for display - puts the decimal point back where it belongs
 display_seconds_remaining = decimal_seconds_remaining / decimal_multiple;	  
 
-if (!(decimal_seconds_remaining % decimal_multiple) && include_decimal_seconds) 
+// FIXME: This does not work
+if (0 == decimal_seconds_remaining % decimal_multiple && include_decimal_seconds) 
 { 
     // If we are at an even second and the user wants the decimal places 
     // displayed, tag the decimal point on to the string. 
@@ -87,24 +94,26 @@ if(include_decimal_seconds)
         if(!(decimal_seconds_remaining % Math.pow(10, a))) 
         { 
         // Add appropriate trailing zeroes if we are showing decimals.
+        // FIXME: This does not work
         display_seconds_remaining = display_seconds_remaining + "0"; 
         } 
     } 
 } 
 
 
-if(decimal_seconds_remaining < 10) // EDIT-Removed the boolean statement requiring include_zero_segments
+if(decimal_seconds_remaining < decimal_multiple * 10 && include_zero_segments)
 { 
     // if we are under 10 seconds and displaying minutes, 
     // add a leading 0 to the seconds 
     display_seconds_remaining = '0' + display_seconds_remaining; 
 } 
 
-if(include_zero_segments && minutes_to_count >= 10 && minutes_remaining < 10 && include_leading_zeroes) 
+if(include_zero_segments && minutes_to_count >= 0 && minutes_remaining < 10 && include_leading_zeroes) 
 { 
-    displayMinutesRemaining = '0' + minutes_remaining; 
+    display_minutes_remaining = '0' + minutes_remaining; 
 } else { 
-    displayMinutesRemaining = minutes_remaining; 
+    display_minutes_remaining = minutes_remaining; 
 } 
 
-':' + display_seconds_remaining
+// Final display string
+days_to_count + ":" + hours_to_count + ":" + display_minutes_remaining + ':' + display_seconds_remaining
