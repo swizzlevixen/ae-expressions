@@ -1,5 +1,7 @@
 // Full Function Countdown Script 
 // Written by Jason Vore - codered10@hotmail.com
+// 2008-07-25
+// https://forums.creativecow.net/readpost/227/10757
 //
 // Edited by Nathaniel Schweinberg - nathaniel@ftcmedia.com
 // 2010-04-28
